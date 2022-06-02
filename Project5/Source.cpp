@@ -47,10 +47,12 @@ int main()
 	ListNode* p2 = new ListNode(2);
 	ListNode* p1 = new ListNode(1);
 	ListNode* cur;
+
 	p1->next = p2;
 	p2->next = p3;
 	p3->next = p4;
 	p4->next = p5;
+
 	cur = p1;
 	for (int i = 0; i<5; i++)
 	{
@@ -58,9 +60,11 @@ int main()
 		cur = cur->next;
 	}
 	std::cout << std::endl;
-	Solution s;
-	p1 = s.reverseList2(p1);
 
+	Solution s;
+	//p1 = s.reverseList1(p1);
+	p1 = s.reverseList2(p1);
+	
 	cur = p1;
 	for (int i = 0; i < 5; i++)
 	{
